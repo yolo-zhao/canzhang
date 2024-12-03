@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>关爱残障人士事迹</h1>
+        </div>
+    </header>
+    <main class="container">
+    <section class="news-section">
+        <h2>近期新闻</h2>
+        <div class="news-grid">
+            <!-- 新闻卡片1 -->
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news1.png') }}" alt="新闻图片">
+news1.png                <div class="news-content">
+                    <p>2024年11月20日 星期三</p>
+                    <a href="https://www.sohu.com/a/826036927_120119029">
+                       温暖沈河：211路车队为残障人士包饺子送物资
+                    </a>
+                </div>
+            </div>
+            <!-- 新闻卡片2 -->
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news2.png') }}" alt="新闻图片">
+                <div class="news-content">
+                    <p>2024年11月19日 星期二</p>
+                    <a href="https://www.thepaper.cn/newsDetail_forward_22504178">
+                       暖心助残18载，用关爱照亮残障人士的心
+                    </a>
+                </div>
+            </div>
+            <!-- 新闻卡片3 -->
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news3.png') }}" alt="新闻图片">
+                <div class="news-content">
+                    <p>2024年11月14日 星期四</p>
+                    <a href="https://www.thepaper.cn/newsDetail_forward_27414365">
+                        关爱残疾人，让每个生命得到同样的尊重
+                    </a>
+                </div>
+            </div>
+            <div class="news-card">
+            <img src="/static/images/news4.png" alt="新闻图片">
+            <div class="news-content">
+                <p>2024年11月21日</p>
+                <a href="https://www.bjnews.com.cn/detail/1732154954129215.html?utm_source=chatgpt.com">恒丰银行北京分行部分党支部赴北京玉华残障人士康养中心开展慰问</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="/static/images/news5.png" alt="新闻图片">
+            <div class="news-content">
+                <p>2024年11月15日</p>
+                <a href="https://news.qq.com/rain/a/20241115A0346200?utm_source=chatgpt.com">暖城有爱：残障人士的温暖家园</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="/static/images/news6.png" alt="新闻图片">
+            <div class="news-content">
+                <p>2024年11月17日</p>
+                <a href="https://news.qq.com/rain/a/20241117A028VP00?utm_source=chatgpt.com">由打造“光明影院”看营口的城市关爱</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- 更多按钮 -->
+
+        <div class="view-more-container">
+    <a href="/all-news" class="view-more-button">查看更多</a>
+</div>
+
+        </div>
+    </section>
+</main>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>这是底部信息。</p>
+        </div>
+    </footer>
+</body>
+</html>

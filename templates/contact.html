@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>联系我们</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">残障人士支持</div>
+            <nav class="nav">
+                <a href="/">首页</a>
+                <a href="/about">关于我们</a>
+                <a href="/resources">资源中心</a>
+                <a href="/blog">新闻动态</a>
+                <a href="/contact">联系我们</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1>联系我们</h1>
+            <form method="post" action="/contact">
+                <label for="name">姓名：</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">邮箱：</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">留言：</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

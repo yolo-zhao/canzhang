@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有新闻</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>所有新闻</h1>
+        </div>
+    </header>
+    <main class="news-section">
+        <div class="news-grid">
+            <!-- 添加所有新闻的卡篇内容 -->
+            {% for news in all_news %}
+            <div class="news-card">
+                <img src="{{ news.image_url }}" alt="{{ news.title }}">
+                <div class="news-content">
+                    <p>{{ news.date }}</p>
+                    <a href="{{ news.link }}" target="_blank">{{ news.title }}</a>
+                </div>
+            </div>
+            {% end for %}
+        </div>
+    </main>
+</body>
+</html>

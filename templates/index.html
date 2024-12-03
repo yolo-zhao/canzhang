@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>残障人士支持</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>图片轮播</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body>
+
+
+    <!-- 顶部导航栏 -->
+    <header class="header" aria-label="页面头部">
+        <div class="container">
+            <!-- Logo 区域 -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="残障人士支持的 Logo" class="search-icon-left">
+            </div>
+            <!-- 顶部链接区域 -->
+            <div class="top-links">
+                <a href="/media">媒体</a>
+                <a href="/contact">联系</a>
+            </div>
+            <!-- 搜索栏区域 -->
+            <form class="search-form" action="/search" method="get" role="search">
+                <input type="text" name="q" placeholder="在这里搜索" aria-label="搜索">
+                <button type="submit" aria-label="搜索">
+                    <img src="{{ url_for('static', filename='images/search-icon.png') }}" alt="搜索图标">
+                </button>
+            </form>
+            <!-- 分隔栏 -->
+            <hr class="divider">
+
+            <!-- 右侧按钮区域 -->
+            <div class="right-buttons">
+                <button class="shop-btn">店</button>
+                <button class="donate-btn">捐</button>
+            </div>
+        </div>
+        <!-- 分隔线 -->
+        <div class="nav-divider"></div>
+        <!-- 导航栏 -->
+        <nav class="nav" aria-label="主导航">
+            <a href="/">首页</a>
+            <a href="/about">关于我们</a>
+            <a href="/resources">资源中心</a>
+            <a href="/media">新闻动态</a>
+            <a href="/contact">联系我们</a>
+
+
+        </nav>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="main">
+        <!-- 内容部分 -->
+       <div class="container">
+        <!-- 左侧列 -->
+           <div class="left-column">
+            <video width="800" height="600" controls autoplay muted loop>
+    <source src="{{ url_for('static', filename='videos/example.ogg') }}" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+           <script>
+    // 获取视频元素
+    const video = document.getElementById('myVideo');
+
+    // 设置放大倍数（例如放大两倍）
+    const enlargeFactor = 2;
+
+    // 监听视频点击事件
+    video.addEventListener('click', function() {
+        // 检查当前是否已经放大
+        if (video.style.transform === "scale(" + enlargeFactor + ")") {
+            // 如果已经放大，恢复原尺寸并保持静音
+            video.style.transform = "scale(1)";
+            video.style.width = "320px";
+            video.style.height = "240px";
+            video.muted = true; // 重新静音
+        } else {
+            // 如果没有放大，放大并取消静音
+            video.style.transform = "scale(" + enlargeFactor + ")";
+            video.style.width = "640px";  // 放大后的宽度
+            video.style.height = "480px"; // 放大后的高度
+            video.muted = false; // 取消静音，开始播放声音
+        }
+    });
+</script>
+
+
+
+
+        </div>
+
+
+
+                <!-- 右侧文字 -->
+                <div class="text-container">
+                    <h1>守护折翼天使，用爱点亮希望之光</h1>
+                    <p>让我们携手，为这些“折翼天使”搭建一个更加温暖包容的世界。你的每一个微笑，每一次拥抱，每一次礼物，都能让他们感受这个世界的温暖。爱，是这个世界美丽的语言。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 新增的媒体页面块 -->
+         <section class="media-section">
+        <h2>关爱残障人士事迹</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news1.png') }}" alt="新闻图片">
+                <div class="news-content">
+                    <p>2024年11月20日 星期三</p>
+                    <a href="https://www.sohu.com/a/826036927_120119029">
+                       温暖沈河：211路车队为残障人士包饺子送物资
+                    </a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news2.png') }}" alt="新闻图片">
+                 <div class="news-content">
+                    <p>2024年11月19日 星期二</p>
+                    <a href="https://www.thepaper.cn/newsDetail_forward_22504178">
+                       暖心助残18载，用关爱照亮残障人士的心
+                    </a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="{{ url_for('static', filename='images/news3.png') }}" alt="新闻图片">
+                <div class="news-content">
+                    <p>2024年11月14日 星期四</p>
+                    <a href="https://www.thepaper.cn/newsDetail_forward_27414365">
+                        关爱残疾人，让每个生命得到同样的尊重
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <button class="btn-more">查看更多</button>
+
+
+        </div>
+    </section>
+
+
+        <section class="video-section">
+    <h2>想了解更多</h2>
+    <p>请看</p>
+    <div class="video-grid">
+        <!-- 视频 1 -->
+        <div class="video-card">
+            <iframe
+                src="{{ url_for('static', filename='videos/shili1.mp4') }}" type="video/mp4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- 视频 2 -->
+        <div class="video-card">
+            <iframe
+                src="{{ url_for('static', filename='videos/shili2.mp4') }}" type="video/mp4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- 视频 3 -->
+        <div class="video-card">
+            <iframe
+                src="https://www.youtube.com/embed/视频ID3"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+
+    <a href="/more-videos" class="load-more-btn">查看更多</a>
+
+
+
+</section>
+        <section>
+    <h3>更多信息</h3>
+    <p>如果你想了解更多关于盲人的知识，请点击以下链接：</p>
+    <a href="/blind-awareness">了解盲人知识</a>
+</section>
+
+
+
+
+
+
+
+    </main>
+
+    <!-- 底部紫色区域 -->
+    <footer class="footer" aria-label="页面尾部">
+        <div class="container">
+            <p>我们使用 Cookies 来提升您的体验。点击“同意”，即表示您同意我们的条款。</p>
+            <div class="footer-buttons">
+                <button class="btn-primary">好的，我同意</button>
+                <button class="btn-secondary">不同意</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
